@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,8 @@ const Form = () => {
     country: "",
   });
 
+  const [formMessage, setFormMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -22,7 +25,30 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormMessage("");
     console.log("Form Data:", formData);
+    axios
+      .post(
+        "http://e-pace-s4hana-frontend-api.uk-e1.cloudhub.io/order",
+        formData
+      )
+      .then((res) => {
+        setFormMessage("Successfully submitted");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          company: "",
+          street: "",
+          postCode: "",
+          country: "",
+        });
+      })
+      .catch((err) => {
+        setFormMessage("An error occurred");
+        console.log(err);
+      });
   };
 
   return (
@@ -35,15 +61,15 @@ const Form = () => {
       </h2>
 
       {[
-        { label: "First Name", id: "firstName", type: "text" },
-        { label: "Last Name", id: "lastName", type: "text" },
-        { label: "Email", id: "email", type: "email" },
+        { label: "First Name", id: "firstName", type: "text", required: true },
+        { label: "Last Name", id: "lastName", type: "text", required: true },
+        { label: "Email", id: "email", type: "email", required: true },
         { label: "Phone", id: "phone", type: "tel" },
-        { label: "Company", id: "company", type: "text" },
+        { label: "Company", id: "company", type: "text", required: true },
         { label: "Street", id: "street", type: "text" },
         { label: "Post Code", id: "postCode", type: "text" },
         { label: "Country", id: "country", type: "text" },
-      ].map(({ label, id, type }) => (
+      ].map(({ label, id, type, required }) => (
         <div className="mb-4" key={id}>
           <label htmlFor={id} className="block text-gray-700 font-medium mb-2">
             {label}
@@ -55,6 +81,7 @@ const Form = () => {
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={formData[id]}
             onChange={handleChange}
+            required={required}
           />
         </div>
       ))}
@@ -65,6 +92,7 @@ const Form = () => {
       >
         Check Out
       </button>
+      <h3 className="text-red p-2">{formMessage}</h3>
     </form>
   );
 };
