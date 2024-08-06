@@ -4,26 +4,22 @@ import ProductCard from "./ProductCard";
 const products = [
   {
     id: 1,
-    name: "Product 1",
-    price: 10,
-    image: "https://via.placeholder.com/150",
+    name: "Pace Nutella Jars",
+    image: "nutella.jpg",
   },
   {
     id: 2,
     name: "Product 2",
-    price: 20,
     image: "https://via.placeholder.com/150",
   },
   {
     id: 3,
     name: "Product 3",
-    price: 30,
     image: "https://via.placeholder.com/150",
   },
   {
     id: 4,
     name: "Product 4",
-    price: 40,
     image: "https://via.placeholder.com/150",
   },
 ];
@@ -40,6 +36,14 @@ const ProductList = ({ addToCart }) => {
             addToCart={addToCart}
           />
         ))}
+      </div>
+      <div className="mt-8 flex justify-center">
+        <a
+          href="#form"
+          className="bg-black text-white py-4 px-8 rounded-lg hover:bg-slate-700 transition duration-300"
+        >
+          Checkout
+        </a>
       </div>
     </div>
   );

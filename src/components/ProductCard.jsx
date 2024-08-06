@@ -8,12 +8,12 @@ const ProductCard = ({ product, addToCart }) => {
         alt={product.name}
         className="w-full h-48 object-cover rounded-t-lg"
       />
-      <div className="mt-4">
+      <div className="mt-4 flex justify-between items-center">
         <h3 className="text-xl font-bold">{product.name}</h3>
-        <p className="mt-2">${product.price}</p>
+
         <button
           onClick={() => addToCart(product)}
-          className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg"
+          className="mt-4 bg-black text-white py-2 px-4 rounded-lg hover:bg-slate-700 transition duration-300"
         >
           Add to Cart
         </button>
