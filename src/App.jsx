@@ -11,7 +11,7 @@ function App() {
       <section>
         <Form />
       </section>
-      <section>Order Page</section>
+      {/* <section>Order Page</section> */}
     </>
   );
 }
