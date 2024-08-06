@@ -53,7 +53,7 @@ const Form = () => {
 
   return (
     <form
-      className="max-w-lg mx-auto p-6 bg-gray-100 shadow-lg rounded-lg"
+      className="max-w-lg mx-auto p-6 pt-10 bg-gray-100 shadow-lg rounded-lg"
       onSubmit={handleSubmit}
     >
       <h2 className="text-2xl font-semibold text-center mb-6 text-blue-900">

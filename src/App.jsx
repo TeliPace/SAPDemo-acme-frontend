@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navbar, Form } from "./components";
+import { Navbar, Form, Carousel } from "./components";
 
 function App() {
   return (
@@ -7,7 +7,9 @@ function App() {
       <section>
         <Navbar />
       </section>
-
+      <section className="w-full min-h-screen flex items-center">
+        <Carousel />
+      </section>
       <section>
         <Form />
       </section>
