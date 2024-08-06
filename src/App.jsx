@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navbar, Form, Carousel } from "./components";
+import { Navbar, Form, Carousel, ProductList } from "./components";
 
 function App() {
   return (
@@ -9,6 +9,9 @@ function App() {
       </section>
       <section className="w-full min-h-screen flex items-center">
         <Carousel />
+      </section>
+      <section>
+        <ProductList />
       </section>
       <section>
         <Form />
