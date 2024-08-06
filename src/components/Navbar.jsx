@@ -1,4 +1,5 @@
 import React from "react";
+import { BsCart4 } from "react-icons/bs";
 
 const Navbar = ({ cartCount }) => {
   return (
@@ -13,7 +14,9 @@ const Navbar = ({ cartCount }) => {
             Form
           </a>
           <div className="relative">
-            <span className="material-icons">shopping_cart</span>
+            <span className="material-icons">
+              <BsCart4 />
+            </span>
             <span className="absolute -top-2 -right-2 bg-red-600 rounded-full text-xs w-5 h-5 flex items-center justify-center">
               {cartCount}
             </span>

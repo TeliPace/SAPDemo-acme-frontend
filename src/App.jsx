@@ -10,10 +10,10 @@ function App() {
       <section className="w-full min-h-screen flex items-center">
         <Carousel />
       </section>
-      <section>
+      <section className="w-full min-h-screen flex items-center">
         <ProductList />
       </section>
-      <section>
+      <section className="w-full min-h-screen">
         <Form />
       </section>
       {/* <section>Order Page</section> */}
