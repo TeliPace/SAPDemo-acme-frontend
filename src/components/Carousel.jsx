@@ -13,7 +13,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change slide every 3 seconds
+    }, 6000); // Change slide every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -26,13 +26,13 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full h-96 overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       <div
         className="flex transition-transform duration-500"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((src, index) => (
-          <div key={index} className="min-w-full h-96">
+          <div key={index} className="min-w-full h-screen">
             <img
               src={src}
               alt={`Product ${index + 1}`}
