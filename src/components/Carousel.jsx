@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const images = [
-  "https://via.placeholder.com/800x400?text=Product+1",
-  "https://via.placeholder.com/800x400?text=Product+2",
-  "https://via.placeholder.com/800x400?text=Product+3",
-  "https://via.placeholder.com/800x400?text=Product+4",
-];
+const images = ["woman.jpg", "ale.jpg", "swag.jpg", "brand.jpg"];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,18 +36,6 @@ const Carousel = () => {
           </div>
         ))}
       </div>
-      <button
-        onClick={prevSlide}
-        className="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2"
-      >
-        Prev
-      </button>
-      <button
-        onClick={nextSlide}
-        className="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2"
-      >
-        Next
-      </button>
     </div>
   );
 };

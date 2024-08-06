@@ -54,46 +54,60 @@ const Form = () => {
   return (
     <form
       id="form"
-      className="max-w-lg mx-auto p-6 pt-10 bg-gray-100 shadow-lg rounded-lg"
+      className="w-full max-w-5xl mx-auto p-6 pt-10 bg-gray-100 shadow-lg rounded-lg"
       onSubmit={handleSubmit}
     >
-      <h2 className="text-2xl font-semibold text-center mb-6 text-blue-900">
-        Details
-      </h2>
+      <h2 className="text-3xl font-bold mb-8">Details</h2>
 
-      {[
-        { label: "First Name", id: "firstName", type: "text", required: true },
-        { label: "Last Name", id: "lastName", type: "text", required: true },
-        { label: "Email", id: "email", type: "email", required: true },
-        { label: "Phone", id: "phone", type: "tel" },
-        { label: "Company", id: "company", type: "text", required: true },
-        { label: "Street", id: "street", type: "text" },
-        { label: "Post Code", id: "postCode", type: "text" },
-        { label: "Country", id: "country", type: "text" },
-      ].map(({ label, id, type, required }) => (
-        <div className="mb-4" key={id}>
-          <label htmlFor={id} className="block text-gray-700 font-medium mb-2">
-            {label}
-          </label>
-          <input
-            type={type}
-            id={id}
-            name={id}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={formData[id]}
-            onChange={handleChange}
-            required={required}
-          />
-        </div>
-      ))}
-
-      <button
-        type="submit"
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
-      >
-        Check Out
-      </button>
-      <h3 className="text-red p-2">{formMessage}</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          {
+            label: "First Name *",
+            id: "firstName",
+            type: "text",
+            required: true,
+          },
+          {
+            label: "Last Name *",
+            id: "lastName",
+            type: "text",
+            required: true,
+          },
+          { label: "Email *", id: "email", type: "email", required: true },
+          { label: "Phone", id: "phone", type: "tel" },
+          { label: "Company *", id: "company", type: "text", required: true },
+          { label: "Street", id: "street", type: "text" },
+          { label: "Post Code", id: "postCode", type: "text" },
+          { label: "Country", id: "country", type: "text" },
+        ].map(({ label, id, type, required }) => (
+          <div className="mb-4" key={id}>
+            <label
+              htmlFor={id}
+              className="block text-gray-700 font-medium mb-2"
+            >
+              {label}
+            </label>
+            <input
+              type={type}
+              id={id}
+              name={id}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={formData[id]}
+              onChange={handleChange}
+              required={required}
+            />
+          </div>
+        ))}
+      </div>
+      <div className="flex w-full justify-center items-center p-3">
+        <button
+          type="submit"
+          className="bg-black text-white py-2 px-4 rounded-md hover:bg-slate-700 transition duration-300"
+        >
+          Place Order
+        </button>
+        <h3 className="text-red p-2">{formMessage}</h3>
+      </div>
     </form>
   );
 };
