@@ -3,7 +3,7 @@ import { BsCart4 } from "react-icons/bs";
 
 const Navbar = ({ cartCount }) => {
   return (
-    <nav className="bg-black text-white p-6 fixed top-0 w-full shadow-lg z-50">
+    <nav className="bg-primary text-white p-6 fixed top-0 w-full shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center">
         <span className="flex flex-row gap-2 justify-center items-center">
 

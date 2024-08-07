@@ -57,7 +57,7 @@ const Form = () => {
       className="w-full max-w-5xl mx-auto p-6 pt-10 bg-gray-100 shadow-lg rounded-lg"
       onSubmit={handleSubmit}
     >
-      <h2 className="text-3xl font-bold mb-8">Details</h2>
+      <h2 className="text-3xl font-bold mb-8 text-primary">Details</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
@@ -102,7 +102,7 @@ const Form = () => {
       <div className="flex w-full justify-center items-center p-3">
         <button
           type="submit"
-          className="bg-black text-white py-2 px-4 rounded-md hover:bg-slate-700 transition duration-300"
+          className="bg-accent text-white py-2 px-4 rounded-md hover:bg-slate-700 transition duration-300"
         >
           Place Order
         </button>

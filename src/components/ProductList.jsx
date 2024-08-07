@@ -40,7 +40,7 @@ const ProductList = ({ addToCart }) => {
       <div className="mt-8 flex justify-center">
         <a
           href="#form"
-          className="bg-black text-white py-4 px-8 rounded-lg hover:bg-slate-700 transition duration-300"
+          className="bg-accent text-white py-4 px-8 rounded-lg hover:bg-slate-700 transition duration-300"
         >
           Checkout
         </a>
