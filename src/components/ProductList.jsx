@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 const products = [
   {
     id: 1,
-    name: "Pace Nutella Jars",
+    name: "Branded Nutella Jars",
     image: "nutella.jpg",
   },
   {

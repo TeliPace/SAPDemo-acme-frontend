@@ -33,7 +33,7 @@ const Form = () => {
         formData
       )
       .then((res) => {
-        setFormMessage("Successfully submitted");
+        setFormMessage("Order placed successfully");
         setFormData({
           firstName: "",
           lastName: "",
@@ -99,14 +99,14 @@ const Form = () => {
           </div>
         ))}
       </div>
-      <div className="flex w-full justify-center items-center p-3">
+      <div className="flex w-full flex-col justify-center items-center p-3">
         <button
           type="submit"
           className="bg-accent text-white py-2 px-4 rounded-md hover:bg-slate-700 transition duration-300"
         >
           Place Order
         </button>
-        <h3 className="text-red p-2">{formMessage}</h3>
+        <h3 className="text-success font-bold text-xl p-3">{formMessage}</h3>
       </div>
     </form>
   );
