@@ -8,7 +8,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); // Change slide every 3 seconds
+    }, 6000); // Change slide every 6asd\Dea|SSDE seconds
     return () => clearInterval(interval);
   }, []);
 
