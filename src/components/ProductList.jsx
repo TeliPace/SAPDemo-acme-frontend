@@ -9,26 +9,26 @@ const products = [
   },
   {
     id: 2,
-    name: "Product 2",
-    image: "https://via.placeholder.com/150",
+    name: "Skincare",
+    image: "prods.jpg",
   },
   {
     id: 3,
-    name: "Product 3",
-    image: "https://via.placeholder.com/150",
+    name: "Branded Ale",
+    image: "ale.jpg",
   },
   {
     id: 4,
-    name: "Product 4",
-    image: "https://via.placeholder.com/150",
+    name: "Various",
+    image: "swag.jpg",
   },
 ];
 
 const ProductList = ({ addToCart }) => {
   return (
-    <div id="products" className="container mx-auto py-16">
+    <div  className="container mx-auto py-16 w-full flex flex-col items-center justify-center gap-4">
       <h2 className="text-3xl font-bold mb-8">Products</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 gap-10">
         {products.map((product) => (
           <ProductCard
             key={product.id}

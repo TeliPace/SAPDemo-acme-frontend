@@ -3,11 +3,15 @@ import { BsCart4 } from "react-icons/bs";
 
 const Navbar = ({ cartCount }) => {
   return (
-    <nav className="bg-black text-white p-4 fixed top-0 w-full shadow-lg z-50">
+    <nav className="bg-black text-white p-6 fixed top-0 w-full shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">ACME</div>
+        <span className="flex flex-row gap-2 justify-center items-center">
+
+        <img src="logo.png" className="size-8"/>
+        <div className="text-3xl font-bold">ACME</div>
+        </span>
         <div className="flex items-center space-x-4">
-          <a href="#form" className="hover:underline">
+          <a href="" className="hover:underline">
             About Us
           </a>
           <a href="#products" className="hover:underline">

@@ -53,7 +53,7 @@ const Form = () => {
 
   return (
     <form
-      id="form"
+  
       className="w-full max-w-5xl mx-auto p-6 pt-10 bg-gray-100 shadow-lg rounded-lg"
       onSubmit={handleSubmit}
     >

@@ -8,8 +8,10 @@ const ProductCard = ({ product, addToCart }) => {
         alt={product.name}
         className="w-full h-48 object-cover rounded-t-lg"
       />
-      <div className="mt-4 flex justify-between items-center">
+      <div className="mt-4 w-full flex flex-col items-center">
+
         <h3 className="text-xl font-bold">{product.name}</h3>
+
 
         <button
           onClick={() => addToCart(product)}
@@ -17,6 +19,7 @@ const ProductCard = ({ product, addToCart }) => {
         >
           Add to Cart
         </button>
+
       </div>
     </div>
   );

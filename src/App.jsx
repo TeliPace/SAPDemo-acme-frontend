@@ -13,13 +13,13 @@ function App() {
       <section>
         <Navbar cartCount={cart.length} />
       </section>
-      <section className="w-full min-h-screen flex items-center">
+      <section className="w-full min-h-screen flex items-center mt-20">
         <Carousel />
       </section>
-      <section className="w-full min-h-screen flex items-center">
+      <section id="products" className="w-full min-h-screen flex items-center justify-center">
         <ProductList addToCart={addToCart} />
       </section>
-      <section className="w-full min-h-screen flex items-center">
+      <section id="form" className="w-full min-h-screen flex items-center">
         <Form />
       </section>
       <Footer />

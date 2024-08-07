@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const images = ["woman.jpg", "ale.jpg", "swag.jpg", "brand.jpg"];
+const images = ["items.jpg", "packages.jpg", "skincare.jpg", "brand.jpg"];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
